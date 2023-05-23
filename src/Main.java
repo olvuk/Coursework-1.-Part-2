@@ -114,7 +114,7 @@ public class Main {
 
         Employee[] employees = new Employee[10];
         employees[0] = new Employee("Николева Наталья Сергеевна", 1, 36000);
-        employees[1] = new Employee("Федорова Анна Петровна", 2, 45000);
+        employees[1] = new Employee("Фёдорова Анна Петровна", 2, 45000);
         employees[2] = new Employee("Лецко Нина Александровна", 1, 40000);
         employees[3] = new Employee("Прус Алла Борисовна", 1, 56000);
         employees[4] = new Employee("Васильева Мария Александровна", 3, 55000);
