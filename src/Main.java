@@ -34,7 +34,7 @@ public class Main {
                 count = count + 1;
             }
         }
-        return calculateTotalSalaryInDepartment(employees, department) / count;
+        return (double) calculateTotalSalaryInDepartment(employees, department) / count;
     }
 
     public static int calculateTotalSalaryInDepartment(Employee[] employees, int department) {
@@ -48,18 +48,18 @@ public class Main {
     }
     public static Employee findEmployeeWithMaxSalaryInDepartment(Employee[] employees, int department) {
         Employee employeeWithMaxSalaryInDepartment = null;
-        for (int i = 0; i < employees.length; i++) {
-            if (employees[i].getDepartment() == department && (employeeWithMaxSalaryInDepartment == null || employees[i].getSalary() > employeeWithMaxSalaryInDepartment.getSalary())) {
-                employeeWithMaxSalaryInDepartment = employees[i];
+        for (Employee employee : employees) {
+            if (employee.getDepartment() == department && (employeeWithMaxSalaryInDepartment == null || employee.getSalary() > employeeWithMaxSalaryInDepartment.getSalary())) {
+                employeeWithMaxSalaryInDepartment = employee;
             }
         }
         return employeeWithMaxSalaryInDepartment;
     }
     public static Employee findEmployeeWithMinSalaryInDepartment(Employee[] employees, int department) {
         Employee employeeWithMinSalaryInDepartment = null;
-        for (int i = 0; i < employees.length; i++) {
-            if (employees[i].getDepartment() == department && (employeeWithMinSalaryInDepartment == null || employees[i].getSalary() < employeeWithMinSalaryInDepartment.getSalary())) {
-                employeeWithMinSalaryInDepartment = employees[i];
+        for (Employee employee : employees) {
+            if (employee.getDepartment() == department && (employeeWithMinSalaryInDepartment == null || employee.getSalary() < employeeWithMinSalaryInDepartment.getSalary())) {
+                employeeWithMinSalaryInDepartment = employee;
             }
         }
         return employeeWithMinSalaryInDepartment;
@@ -75,22 +75,22 @@ public class Main {
         }
     }
     public static double getAverageSalary(Employee[] employees) {
-        return calculateTotalSalary(employees) / employees.length;
+        return (double) calculateTotalSalary(employees) / employees.length;
     }
     public static Employee getEmployeeWithMaxSalary (Employee[] employees) {
         Employee employeeWithMaxSalary = employees[0];
-        for (int i = 0; i < employees.length; i++) {
-            if (employees[i].getSalary() > employeeWithMaxSalary.getSalary()) {
-                employeeWithMaxSalary = employees[i];
+        for (Employee employee : employees) {
+            if (employee.getSalary() > employeeWithMaxSalary.getSalary()) {
+                employeeWithMaxSalary = employee;
             }
         }
         return employeeWithMaxSalary;
     }
     public static Employee getEmployeeWithMinSalary (Employee[] employees) {
         Employee employeeWithMinSalary = employees[0];
-        for (int i = 0; i < employees.length; i++) {
-            if (employees[i].getSalary() < employeeWithMinSalary.getSalary()) {
-                employeeWithMinSalary = employees[i];
+        for (Employee employee : employees) {
+            if (employee.getSalary() < employeeWithMinSalary.getSalary()) {
+                employeeWithMinSalary = employee;
             }
         }
         return employeeWithMinSalary;
